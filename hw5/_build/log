@@ -1,0 +1,134 @@
+# dune ut
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Workspace root: /mnt/c/Megan/hw5_stub
+# Auto-detected concurrency: 8
+$ /usr/bin/ocamlc.opt -config > /tmp/dune_054dc8_output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path =
+#      Some External "/home/megansanford/.opam/default/lib/toplevel"
+#  ; ocaml_bin = External "/usr/bin"
+#  ; ocaml = Ok External "/home/megansanford/.opam/default/bin/ocaml"
+#  ; ocamlc = External "/usr/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/usr/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/usr/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/usr/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/home/megansanford/.opam/default/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/usr/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" : "/mnt/c/Megan/hw5_stub"
+#        ; "INSIDE_DUNE" : "/mnt/c/Megan/hw5_stub/_build/default"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/mnt/c/Megan/hw5_stub/_build/install/default/lib"
+#        ; "OCAMLPATH" : "/mnt/c/Megan/hw5_stub/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/mnt/c/Megan/hw5_stub/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_path = [ External "/home/megansanford/.opam/default/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.08.1"
+#      ; standard_library_default = "/usr/lib/ocaml"
+#      ; standard_library = "/usr/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "x86_64-linux-gnu-gcc"
+#      ; ocamlc_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-fPIC" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; ocamlopt_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; bytecomp_c_compiler =
+#          [ "x86_64-linux-gnu-gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-fPIC"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-ldl"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "x86_64-linux-gnu-gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; native_c_libraries = [ "-lm"; "-ldl" ]
+#      ; native_pack_linker = [ "x86_64-linux-gnu-ld"; "-r"; "-o" ]
+#      ; cc_profile = [ "-pg" ]
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "linux"
+#      ; asm = [ "x86_64-linux-gnu-as" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-pc-linux-gnu"
+#      ; target = "x86_64-pc-linux-gnu"
+#      ; profiling = true
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = false
+#      ; exec_magic_number = "Caml1999X025"
+#      ; cmi_magic_number = "Caml1999I025"
+#      ; cmo_magic_number = "Caml1999O025"
+#      ; cma_magic_number = "Caml1999A025"
+#      ; cmx_magic_number = "Caml1999Y025"
+#      ; cmxa_magic_number = "Caml1999Z025"
+#      ; ast_impl_magic_number = "Caml1999M025"
+#      ; ast_intf_magic_number = "Caml1999N025"
+#      ; cmxs_magic_number = "Caml1999D025"
+#      ; cmt_magic_number = "Caml1999T025"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/default && /usr/bin/ocamldep.opt -modules -impl src/checker.ml) > _build/default/src/.checked.objs/checker.ml.d
+$ (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -bin-annot -I src/.checked.objs/byte -no-alias-deps -opaque -open Checked -o src/.checked.objs/byte/checked__Checker.cmo -c -impl src/checker.ml)
+> File "src/checker.ml", line 70, characters 45-51:
+> 70 |     List.fold_left (fun env l -> env >>= fun helper -> chk_expr l) (return UnitType) es
+>                                                   ^^^^^^
+> Warning 27: unused variable helper.
+> File "src/checker.ml", line 94, characters 53-57:
+> 94 |     chk_expr e >>= arg_of_listType "nullL: " >>= fun list ->
+>                                                           ^^^^
+> Warning 27: unused variable list.
+> File "src/checker.ml", line 108, characters 53-55:
+> 108 |     chk_expr le >>= arg_of_treeType "node: " >>= fun e2 ->
+>                                                            ^^
+> Warning 27: unused variable e2.
+> File "src/checker.ml", line 109, characters 53-55:
+> 109 |     chk_expr re >>= arg_of_treeType "node: " >>= fun e3 ->
+>                                                            ^^
+> Warning 27: unused variable e3.
+> File "src/checker.ml", line 112, characters 53-57:
+> 112 |     chk_expr t >>= arg_of_treeType "nullT: " >>= fun tree ->
+>                                                            ^^^^
+> Warning 27: unused variable tree.
+$ (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -a -o src/checked.cma src/.checked.objs/byte/checked.cmo src/.checked.objs/byte/checked__ReM.cmo src/.checked.objs/byte/checked__Store.cmo src/.checked.objs/byte/checked__Ast.cmo src/.checked.objs/byte/checked__Parser.cmo src/.checked.objs/byte/checked__Lexer.cmo src/.checked.objs/byte/checked__Ds.cmo src/.checked.objs/byte/checked__Interp.cmo src/.checked.objs/byte/checked__Dst.cmo src/.checked.objs/byte/checked__Checker.cmo)
+$ (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -24 -g -bin-annot -I src/.utop/.utop.eobjs/byte -I /home/megansanford/.opam/default/lib/bigarray-compat -I /home/megansanford/.opam/default/lib/camomile -I /home/megansanford/.opam/default/lib/camomile/default_config -I /home/megansanford/.opam/default/lib/camomile/dyn -I /home/megansanford/.opam/default/lib/camomile/lib_default -I /home/megansanford/.opam/default/lib/camomile/library -I /home/megansanford/.opam/default/lib/charInfo_width -I /home/megansanford/.opam/default/lib/findlib -I /home/megansanford/.opam/default/lib/lambda-term -I /home/megansanford/.opam/default/lib/lwt -I /home/megansanford/.opam/default/lib/lwt/unix -I /home/megansanford/.opam/default/lib/lwt_log -I /home/megansanford/.opam/default/lib/lwt_log/core -I /home/megansanford/.opam/default/lib/lwt_react -I /home/megansanford/.opam/default/lib/mew -I /home/megansanford/.opam/default/lib/mew_vi -I /home/megansanford/.opam/default/lib/mmap -I /home/megansanford/.opam/default/lib/ocplib-endian -I /home/megansanford/.opam/default/lib/ocplib-endian/bigstring -I /home/megansanford/.opam/default/lib/react -I /home/megansanford/.opam/default/lib/result -I /home/megansanford/.opam/default/lib/seq -I /home/megansanford/.opam/default/lib/trie -I /home/megansanford/.opam/default/lib/utop -I /home/megansanford/.opam/default/lib/zed -I /usr/lib/ocaml/compiler-libs -I /usr/lib/ocaml/threads -I src/.checked.objs/byte -no-alias-deps -o src/.utop/.utop.eobjs/byte/dune__exe__Utop.cmo -c -impl src/.utop/utop.ml-gen)
+$ (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -24 -g -o src/.utop/utop.exe -custom /usr/lib/ocaml/compiler-libs/ocamlcommon.cma /usr/lib/ocaml/compiler-libs/ocamlbytecomp.cma /usr/lib/ocaml/compiler-libs/ocamltoplevel.cma /home/megansanford/.opam/default/lib/findlib/findlib.cma /home/megansanford/.opam/default/lib/findlib/findlib_top.cma -I /usr/lib/ocaml /home/megansanford/.opam/default/lib/result/result.cma /home/megansanford/.opam/default/lib/lwt/lwt.cma /usr/lib/ocaml/unix.cma -I /usr/lib/ocaml /usr/lib/ocaml/bigarray.cma -I /usr/lib/ocaml /home/megansanford/.opam/default/lib/bigarray-compat/bigarray_compat.cma /home/megansanford/.opam/default/lib/mmap/mmap.cma /home/megansanford/.opam/default/lib/ocplib-endian/ocplib_endian.cma /home/megansanford/.opam/default/lib/ocplib-endian/bigstring/ocplib_endian_bigstring.cma /usr/lib/ocaml/threads/threads.cma -I /usr/lib/ocaml /home/megansanford/.opam/default/lib/lwt/unix/lwt_unix.cma -I /home/megansanford/.opam/default/lib/lwt/unix /home/megansanford/.opam/default/lib/react/react.cma /home/megansanford/.opam/default/lib/lwt_react/lwt_react.cma /home/megansanford/.opam/default/lib/camomile/default_config/camomileDefaultConfig.cma /home/megansanford/.opam/default/lib/camomile/library/camomileLibrary.cma /home/megansanford/.opam/default/lib/camomile/lib_default/camomileLibraryDefault.cma /home/megansanford/.opam/default/lib/camomile/dyn/camomileLibraryDyn.cma /home/megansanford/.opam/default/lib/camomile/camomile_yuge.cma /home/megansanford/.opam/default/lib/charInfo_width/charInfo_width.cma /home/megansanford/.opam/default/lib/zed/zed.cma /home/megansanford/.opam/default/lib/lwt_log/core/lwt_log_core.cma /home/megansanford/.opam/default/lib/lwt_log/lwt_log.cma /home/megansanford/.opam/default/lib/trie/trie.cma /home/megansanford/.opam/default/lib/mew/mew.cma /home/megansanford/.opam/default/lib/mew_vi/mew_vi.cma /home/megansanford/.opam/default/lib/lambda-term/lambda_term.cma -I /home/megansanford/.opam/default/lib/lambda-term /home/megansanford/.opam/default/lib/utop/uTop.cma src/checked.cma src/.utop/.utop.eobjs/byte/dune__exe__Utop.cmo -linkall -warn-error -31)
